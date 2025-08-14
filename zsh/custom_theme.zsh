@@ -1,7 +1,7 @@
 # This script file is used for custom zsh theme
 
 if [[ -n "${CUSTOM_THEME+x}" ]]; then
-    if [[ "$(uname)" == "darwin" ]]; then
+    if [[ "$(uname)" == "Darwin" ]]; then
         # set ls dir color, use env var LSCOLORS
         export LSCOLORS="exgxbxdxcxexexabagacad"
 
