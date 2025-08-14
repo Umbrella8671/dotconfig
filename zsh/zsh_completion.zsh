@@ -1,7 +1,7 @@
 # This script file is used for zsh completion
 
 # zsh的自动补全与高亮
-autoload -Uz compinit && compinit
+[[ -n "${CUSTOM_THEME+x}" ]] && autoload -Uz compinit && compinit
 
 [[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
