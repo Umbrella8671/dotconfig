@@ -10,8 +10,8 @@ esac
 #
 # theme setting
 # 
-# CUSTOM_THEME=true # used for custom theme
-ZIMFW_THEME=true # used for zim theme
+CUSTOM_THEME=true # used for custom theme
+# ZIMFW_THEME=true # used for zim theme
 
 if [[ "${CUSTOM_THEME}" == "true" ]]; then
     source $HOME/.config/zsh/themes/custom_theme.zsh
