@@ -1,0 +1,28 @@
+# ~/.zshrc
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+
+#
+# theme setting
+# 
+# CUSTOM_THEME=true # used for custom theme
+ZIMFW_THEME=true # used for zim theme
+
+if [[ "${CUSTOM_THEME}" == "true" ]]; then
+    source $HOME/.config/zsh/themes/custom_theme.zsh
+elif [[ "${ZIMFW_THEME}" == "true" ]]; then
+    # [[ -n "${ZIMFW_THEME+x}" ]] 
+    source $HOME/.config/zsh/themes/zimfw_theme.zsh
+fi
+
+# Load Zsh configuration files
+source $HOME/.config/zsh/zsh_completion.zsh
+source $HOME/.config/zsh/environments.zsh
+source $HOME/.config/zsh/functions.zsh
+source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/keymap.zsh
