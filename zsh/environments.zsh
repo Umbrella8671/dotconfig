@@ -3,7 +3,7 @@
 #
 # Homebrew
 #
-HOMEBREW_MIRROR=true # used for homebrew mirror
+# HOMEBREW_MIRROR=true # used for homebrew mirror
 if [[ "$HOMEBREW_MIRROR" == "true" ]]; then
     export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
