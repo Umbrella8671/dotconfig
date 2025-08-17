@@ -212,3 +212,5 @@ __marimo__/
 zim/
 
 systemd/
+
+nvim/plugin
