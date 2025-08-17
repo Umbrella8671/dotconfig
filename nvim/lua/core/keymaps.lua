@@ -21,6 +21,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- 窗口
 keymap.set("n", "<leader>sv", "<C-w>v") -- 水平增加窗口
 keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直增加窗口
+keymap.set("n", "<leader>/", ":terminal<CR>")
 
 --
 --
@@ -28,7 +29,8 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直增加窗口
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
-
+-- terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- -------------------------- plugins ------------------------------------------
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
