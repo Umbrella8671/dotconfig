@@ -1,10 +1,16 @@
 # This script file is used for zsh completion
 
 # zsh的自动补全与高亮
-[[ -n "${CUSTOM_THEME+x}" ]] && autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit
 
-[[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# [[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# [[ -f "$HOME/.config/zsh/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "$HOME/.config/zsh/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -f "$HOME/.config/zsh/modules/fsh/fast-syntax-highlighting.plugin.zsh" ]] && source "$HOME/.config/zsh/modules/fsh/fast-syntax-highlighting.plugin.zsh"
+[[ -f "$HOME/.config/zsh/modules/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh" ]] && source "$HOME/.config/zsh/modules/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+[[ -f "$HOME/.config/zsh/modules/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh" ]] && source "$HOME/.config/zsh/modules/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"
+[[ -f "$HOME/.config/zsh/modules/fzf-tab/fzf-tab.plugin.zsh" ]] && source "$HOME/.config/zsh/modules/fzf-tab/fzf-tab.plugin.zsh"
+
 
 # [[ -f "$HOME/.config/zsh/completions/uv.zsh" ]] && source $HOME/.config/zsh/completions/uv.zsh
 # [[ -f "$HOME/.config/zsh/completions/uvx.zsh" ]] && source $HOME/.config/zsh/completions/uvx.zsh
