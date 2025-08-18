@@ -214,3 +214,4 @@ zim/
 systemd/
 
 nvim/plugin
+nvim/lazy-lock.json
