@@ -1,4 +1,5 @@
-require("plugins.plugins_setup")
-require("plugins.plugins_init")
+-- require("core.plugins_setup")
+-- require("core.plugins_init")
+require("core.lazy")
 require("core.options")
 require("core.keymaps")

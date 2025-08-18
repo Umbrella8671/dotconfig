@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 local keymap = vim.keymap
 
@@ -33,7 +34,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- -------------------------- plugins ------------------------------------------
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- bufferline
 keymap.set("n", "<C-k>", ":bnext<CR>")
