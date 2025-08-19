@@ -8,4 +8,10 @@ else
   alias ll='ls -lh'
 fi
 
+if [[ "$(command -v eza)" ]]; then
+  alias ls='eza'
+elif [[ "$(command -v lsd)" ]]; then
+  alias ls='lsd'
+  
+fi
 alias gitlog='git log --graph --oneline --all --decorate'

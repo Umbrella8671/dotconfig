@@ -53,8 +53,8 @@ return {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     keys = {
-      { "<A-H>", "<cmd>BufferLineCloseRight<CR>", desc = "Close buffer to the right" },
-      { "<A-L>", "<cmd>BufferLineCloseLeft<CR>", desc = "Close buffer to the left" },
+      { "<C-j>", "<cmd>BufferLineCycleNext<CR>" },
+      { "<C-k>", "<cmd>BufferLineCyclePrev<CR>" },
     },
     config = function()
       vim.opt.termguicolors = true
@@ -119,7 +119,6 @@ return {
   -- ----------------------------自动补全---------------------------
   {
     'hrsh7th/nvim-cmp',
-    lazy = true,
     config = function()
       local cmp_status_ok, cmp = pcall(require, "cmp")
       if not cmp_status_ok then
@@ -187,20 +186,19 @@ return {
       })
     end
   },
-  { 'hrsh7th/cmp-nvim-lsp', lazy = true },
-  { 'hrsh7th/cmp-path', lazy = true },
+  { 'hrsh7th/cmp-nvim-lsp' },
+  { 'hrsh7th/cmp-path' },
   {
   	"L3MON4D3/LuaSnip",
-    lazy = true,
 	  -- follow latest release.
 	  version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	  -- install jsregexp (optional!).
 	  build = "make install_jsregexp"
   },
-  { 'saadparwaiz1/cmp_luasnip', lazy = true },
-  { "rafamadriz/friendly-snippets", lazy = true },
+  { 'saadparwaiz1/cmp_luasnip' },
+  { "rafamadriz/friendly-snippets" },
 -- 注释与括号配对
-  { 'numToStr/Comment.nvim', lazy=true, opts = {}, },
+  { 'numToStr/Comment.nvim', opts = {}, },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
@@ -237,4 +235,16 @@ return {
   },
   
   { 'lewis6991/gitsigns.nvim', opts = {}, },
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+-- or                              , branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      local builtin = require('telescope.builtin')
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+    end
+  }
 }
