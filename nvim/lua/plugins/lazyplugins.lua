@@ -52,9 +52,13 @@ return {
     lazy = false,
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
+    cmd = {
+      'BufferLineCyclePrev',
+      'BufferLineCycleNext'
+    },
     keys = {
-      { "<C-j>", "<cmd>BufferLineCycleNext<CR>" },
-      { "<C-k>", "<cmd>BufferLineCyclePrev<CR>" },
+      { "<C-[>", "<cmd>BufferLineCyclePrev<CR>" },
+      { "<C-]>", "<cmd>BufferLineCycleNext<CR>" },
     },
     config = function()
       vim.opt.termguicolors = true
