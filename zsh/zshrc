@@ -1,0 +1,30 @@
+# ~/.zshrc
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+
+# Load Zsh configuration files
+source "$HOME/.config/zsh/environments.zsh"
+source "$HOME/.config/zsh/functions.zsh"
+source "$HOME/.config/zsh/completions.zsh"
+source "$HOME/.config/zsh/aliases.zsh"
+source "$HOME/.config/zsh/keymaps.zsh"
+
+
+#
+# theme setting
+# 
+# CUSTOM_THEME=true # used for custom theme
+MAGIC_THEME=true # used for magic theme
+
+if [[ "${CUSTOM_THEME}" == "true" ]]; then
+    source "$HOME/.config/zsh/themes/custom_theme.zsh"
+elif [[ "${MAGIC_THEME}" == "true" ]]; then
+    source "$HOME/.config/zsh/themes/magic_theme.zsh"
+fi
+# control the length of directory of magic theme 
+# zstyle ':zim:prompt-pwd:tail' length 9
