@@ -1,4 +1,9 @@
+# configure python mirror
+python-install-mirror = "https://mirrors.nju.edu.cn/github-release/astral-sh/python-build-standalone/" 
+
+# configure pypi mirror
 [[index]]
-#url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
-url = "https://mirrors.aliyun.com/pypi/simple/"
+name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 default = true
+

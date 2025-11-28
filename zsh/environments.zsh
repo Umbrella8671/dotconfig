@@ -18,3 +18,9 @@ elif [[ $(uname) == "Darwin" ]]; then
 fi
 
 fpath+=($HOME/.config/zsh/completions/)
+
+export GOPATH="$HOME/Developer/toolchains/go"
+
+export NVM_DIR="$HOME/.local/nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
