@@ -43,9 +43,11 @@ if (( ${+functions[git-info]} )); then
   zstyle ':zim:git-info:behind' format '↓'
   zstyle ':zim:git-info:keys' format \
       'prompt' '─[%F{${COLOR_NORMAL}}%b%c%D%A%B%F{${USER_LEVEL}}]'
-
+#  zstyle ':zim:git-info:keys' format \
+#      'prompt' '─[%F{red}%%B%b%c%D%A%B%%b%F{${USER_LEVEL}}]'
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
 PS1='%F{${USER_LEVEL}}$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}── ─%f '
+# PS1='%F{${USER_LEVEL}}──%F{${COLOR_NORMAL}} %F{${USER_LEVEL}}$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}%B$(prompt-pwd)%b%F{${USER_LEVEL}}]${(e)git_info[prompt]}── ─%f '
 unset RPS1
