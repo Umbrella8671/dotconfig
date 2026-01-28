@@ -19,6 +19,17 @@ fi
 
 fpath+=($HOME/.config/zsh/completions/)
 
+# 标准 XDG 变量（现代 Linux/macOS 规范）
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc"
+export NPM_CONFIG_CACHE="$HOME/.cache/npm"
+
+export MPLCONFIGDIR="$HOME/.cache/matplotlib"
+export IPYTHONDIR="$HOME/.cache/ipython"
+
 export GOPATH="$HOME/Developer/toolchains/go"
 
 export NVM_DIR="$HOME/.local/nvm"
